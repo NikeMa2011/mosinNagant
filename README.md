@@ -1,23 +1,23 @@
-[(√)Tarkov shooter-8 reach the reqirements]<br>
-(Nikita`s russian eletronic music)<br>
-[Sinper rifle skill up to level 3]<br>
-[/!\fault:bolt jam]<br>
-[Experence of use medical item(43)]<br>
-[/!\hand on busy]<br>
-(Scav woLum suka vioce)<br>
+[(√)塔克夫神射手-8 已达到要求]<br>
+(劲爆的俄罗斯电音)<br>
+[狙击枪熟练度已达到 3]<br>
+[/!\故障:枪栓卡死]<br>
+[使用医疗物品经验(43)]<br>
+[/!\手上正忙]<br>
+(涡轮!涡轮苏卡!)<br>
 
-Match Stop<br>
-Early termination<br>
+战局结束<br>
+提前终止<br>
 
 
-???(Scav) (x.x) ExampleName000(You) (Head, Eye)<br>
-[Dead in mission] Time cost 00:13:38<br>
+???(Scav) (x.x) 倒霉的PMC(你) (头部, 眼部)<br>
+[行动中阵亡] 战局用时 00:13:38<br>
 [EXP] 1145<br>
-[Attention!You have lost all of the item you bring in to the match!]<br>
-[Next]<br>
+[注意!你已经失去了所有带入战局的物品!]<br>
+[继续]<br>
 
 
 
-EscapeFromTrakov.exe not responding<br>
-[wait it until it respond]<br>
-[close this program]<br>
+EscapeFromTrakov.exe 未响应<br>
+[等待此程序相应]<br>
+[关闭此程序]<br>
