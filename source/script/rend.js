@@ -9,13 +9,23 @@ viewpoint.size.set = function () {
 };
 
 viewpoint.offset.set = function () {
-    viewpoint.offset.x += Math.floor(canvas.size.width - mouse.position.x);
-    viewpoint.offset.y += Math.floor(canvas.size.height - mouse.position.y);
+    viewpoint.offset.x += Math.floor((canvas.size.width - mouse.position.x - viewpoint.offset.x) * viewpoint.offsetPercentage);
+    viewpoint.offset.y += Math.floor((canvas.size.height - mouse.position.y - viewpoint.offset.y) * viewpoint.offsetPercentage);
 };
+
+viewpoint.position.set = function () {
+    viewpoint.position.x = objectSet.game.object[0].position.x;
+    viewpoint.position.y = objectSet.game.object[0].position.y
+}
 
 rend.color.set = function (color) {
     canvasContext.fillStyle = color;
     canvasContext.strokeStyle = color;
+};
+
+rend.font.set = function (size) {
+    canvasContext.textBaseLine = "bottom";
+    canvasContext.font = size + "px sans-serif";
 };
 
 rend.FPS.calculate = function () {
@@ -34,20 +44,18 @@ rend.background.draw = function () {
 };
 
 game.rend = function () {
+    viewpoint.position.set();
+
     rend.background.draw();
 
     for (i in objectSet.game.object) {
         let object = objectSet.game.object[i];
 
-        if (
-            object.position.x + object.size.width >= viewpoint.position.x + viewpoint.offset.x &&
-            object.position.x - object.size.width <= viewpoint.position.x + viewpoint.offset.x &&
-            object.position.y + object.size.height >= viewpoint.position.y + viewpoint.offset.y &&
-            object.position.y - object.size.height <= viewpoint.position.y + viewpoint.offset.y
-        ) {
-            object.draw();
-            console.log("aa")
-        }
+        object.draw();
+    }
+
+    for (i in objectSet.UI.object) {
+        let object = objectSet.UI.object[i];
 
         object.draw();
     }

@@ -4,6 +4,7 @@ onresize = () => {
     canvas.size.set();
     canvas.DOM.size.set();
     viewpoint.size.set();
+    rend.font.set();
 };
 
 onkeydown = (event) => {

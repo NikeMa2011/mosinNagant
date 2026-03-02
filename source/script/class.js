@@ -10,26 +10,38 @@ class entity {
         };
         this.color = "#f200ff";
     }
-}
-
-class people extends entity {
-    constructor() {
-        super();
-
-        this.size = {
-            height: 100,
-            width: 50
-        };
-    }
 
     draw() {
         rend.color.set(this.color);
 
         canvasContext.fillRect(
-            this.position.x - viewpoint.position.x + viewpoint.offset.x,
-            this.position.y - viewpoint.position.y + viewpoint.offset.y,
+            this.position.x - viewpoint.position.x + viewpoint.offset.x - this.size.width / 2,
+            this.position.y - viewpoint.position.y + viewpoint.offset.y - this.size.height / 2,
             this.size.width,
             this.size.height
+        );
+    }
+}
+
+class UI {
+    constructor() {
+        this.position = {
+            x: undefined,
+            y: undefined
+        };
+        this.color = "#ffffff";
+        this.text = undefined;
+        this.textSize = undefined;
+    }
+
+    draw() {
+        rend.color.set(this.color);
+        rend.font.set(this.textSize);
+
+        canvasContext.fillText(
+            this.text,
+            this.position.x,
+            this.position.y
         );
     }
 }
