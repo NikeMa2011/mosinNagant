@@ -46,7 +46,7 @@ game.enemy.move = function () {
             ) {
                 game.rendLoop = game.tick = undefined;
 
-                console.error("你死了")
+                console.error("你死了, 得分:" + game.player.points);
             }
         }
     }
